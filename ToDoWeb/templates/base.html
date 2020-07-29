@@ -1,0 +1,39 @@
+<html>
+    <head>
+        {% block title %}{% endblock %}
+    </head>
+    <body>
+        <header>
+            <div style="background-color: darkorange; margin-top: -10; margin-left: -10; margin-right: -10;">
+                <div align="center">
+                    <h1>ToDo Web App</h1>
+                    <span><big>by Andr&eacute;s Quiroz Valdovinos</big></span>
+                </div>
+                <br>
+                <nav>
+                    <div align="center">
+                        <a href="">Home</a>
+                        <a href="add_todo/">Add Todo</a>
+                        <a href="remove_todo/">Remove Todo</a>
+                        <a href="about_todo/">Why Todo?</a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+        <footer>
+            <div style="background-color: darkorange; margin: -10;">
+                <div align="center">
+                    <h3>ToDo Web App</h3>
+                    <a href="#">About us</a>
+                    <a href="#">GitHub repo</a>
+                    <a href="#">Politics</a>
+                    <a href="#">Privacy and Security</a>
+                </div>
+            </div>
+        </footer>
+        
+    </body>
+</html>

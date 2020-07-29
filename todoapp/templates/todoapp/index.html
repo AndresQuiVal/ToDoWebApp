@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} <title> Your todo's </title> {% endblock %}
+
+{% block content %}
+
+    {% if todo_items %}
+        <h2>Your todo items</h2>
+        <h4>Make sure to complete all of them</h4>
+        <hr>
+        <ol type="A" style="background-color:cyan;">
+            {% for todo in todo_items %}
+                <li>{{ todo }}</li>
+            {% endfor %}
+        </ol>
+    {% else %}
+        <h3>No items are in your todo list</h3>
+        <p>add more items to experience the todo power</p>
+    {% endif %}
+
+{% endblock %}

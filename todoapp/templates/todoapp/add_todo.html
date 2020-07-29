@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>Add todo's</title>{% endblock %}
+
+{% block content %}
+
+    <div style="padding: 10; margin: 10;" align="center">
+        <h2>Add Todo</h3>
+        <form action="" method="POST"> {% csrf_token %}
+            {{ todo_form.as_p }}
+            <input type="submit" value="Save todo" style="background-color: darkorange;">
+        </form>
+    </div>
+
+{% endblock %}
