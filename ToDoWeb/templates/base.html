@@ -4,27 +4,39 @@
     </head>
     <body>
         <header>
-            <div style="background-color: darkorange; margin-top: -10; margin-left: -10; margin-right: -10;">
+            <div style="font-family: Poppins Regular; font-weight: bold; background-color: darkorange; margin: -10 -10 0 -10; padding-bottom: 10px; box-shadow: 0px 10px 50px grey; position: fixed; top: 0px; right: 0px; left: 0px;">
                 <div align="center">
-                    <h1>ToDo Web App</h1>
+                    <div style="background-color: gray; box-shadow: 10px 20px 10x black; border-radius: 10px;">
+                        <h1 style="color: white;">ToDo Web App</h1>
+                    </div>
+                    
                     <span><big>by Andr&eacute;s Quiroz Valdovinos</big></span>
                 </div>
                 <br>
                 <nav>
-                    <div align="center">
-                        <a href="">Home</a>
+                    <div align="center" style="margin-bottom: 10px;">
+                        <ul>
+                            <li style="margin: 10px; display: inline;"><a href="/">Home</a></li>
+                            <li style="margin: 10px; display: inline;"><a href="add_todo/">Add Todo</a></li>
+                            <li style="margin: 10px; display: inline;"><a href="remove_todo/">Remove Todo</a></li>
+                            <li style="margin: 10px; display: inline;"><a href="about_todo/">Why Todo?</a></li>
+                        </ul>
+                        <!-- <a href="/">Home</a>
                         <a href="add_todo/">Add Todo</a>
                         <a href="remove_todo/">Remove Todo</a>
-                        <a href="about_todo/">Why Todo?</a>
+                        <a href="about_todo/">Why Todo?</a> -->
                     </div>
                 </nav>
             </div>
         </header>
         <main>
-            {% block content %}{% endblock %}
+            <div style="margin-top: 200px;">
+                {% block content %}{% endblock %}
+                <input type="text" placeholder="holamundo" style="border-radius: 30px; border: 1px solid gray; padding: .375rem .75rem; outline: none; font-family: Poppins Regular;">
+            </div>
         </main>
         <footer>
-            <div style="background-color: darkorange; margin: -10;">
+            <div style="background-color: darkorange; margin: -10; margin-top: 10px; font-family: Poppins Regular; font-weight: bold; position: absolute; bottom: 0px; right: 0px; left: 0px;">
                 <div align="center">
                     <h3>ToDo Web App</h3>
                     <a href="#">About us</a>
@@ -34,6 +46,5 @@
                 </div>
             </div>
         </footer>
-        
     </body>
 </html>

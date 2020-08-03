@@ -4,7 +4,7 @@ from .forms import ToDoForm
 from .models import ToDo
 
 def index_view(request):
-    todos = ToDo.objects.all()
+    todos = ToDo.objects.all() # todo's
     return render(request, 'todoapp/index.html', {'todo_items' : todos})
 
 def add_todo_view(request):
