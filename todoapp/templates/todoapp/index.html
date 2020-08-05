@@ -8,9 +8,19 @@
         <h2>ToDo items</h2>
         <h4>Make sure to complete all of them</h4>
         <hr>
-        <ol type="A" style="background-color:cyan; ">
+        <ol type="A" style="font-family: Poppins Regular, sans-serif;">
             {% for todo in todo_items %}
-                <li>{{ todo }}</li>
+                <li>
+                    <button style="background-color: red; font-family: Poppins Regular, sans-serif; box-shadow: 2px 4px 10px gray; font-size: .8em; border: 0px; border-radius: 5px; margin: 0px 5px 0px 0px; outline: none;" onclick="alert('delete?')">
+                        Eliminar
+                    </button> 
+                    <button style="background-color: rgb(0,255,0); font-family: Poppins Regular, sans-serif; box-shadow: 2px 4px 10px gray; font-size: .8em; border: 0px; border-radius: 5px; margin: 0px 20px 0px 0px; outline: none;">
+                        Editar
+                    </button>
+                    
+                    <span align="end" style="margin-right: 10px;"><b>{{ todo.priority }}</b></span>
+                    <span align="center">{{ todo.name }}</span>
+                </li>
             {% endfor %}
         </ol>
     {% else %}

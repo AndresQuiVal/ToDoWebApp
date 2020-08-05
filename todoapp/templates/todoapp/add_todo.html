@@ -1,19 +1,17 @@
 {% extends 'base.html' %}
 
-{% block title %}<title>Add todo's</title>{% endblock %}
+{% block title %} <title>Add todo's</title> {% endblock %}
 
 {% block content %}
 
     <div style="padding: 10; margin: 10;" align="center">
         <h2>Add Todo</h3>
         <form action="" method="POST"> {% csrf_token %}
-            <!-- <div style="border-radius: 30px; border: 1px solid gray; padding: .375rem .75rem; outline: none; font-family: Poppins Regular;">  -->
-                <p>{{ todo_form.name }}</p>
-                <p>{{ todo_form.description }}</p>
-                <p>{{ todo_form.date }}</p>
-            <!-- </div> -->
-            <!-- {{ todo_form.as_p }} -->
-            <input type="submit" value="Save todo" style="background-color: darkorange;">
+            <div class="add-todo-form-container"> 
+                {{ todo_form.as_p }}
+            </div>
+            <br>
+            <input type="submit" value="Save todo" class="custom-button">
         </form>
     </div>
 
