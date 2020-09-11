@@ -9,3 +9,7 @@ class ToDoForm(forms.ModelForm):
              "description" : forms.Textarea(attrs={'placeholder': 'Enter the description'}),
              "name" : forms.TextInput(attrs={'placeholder' : 'Enter your todo name'}),
         }
+
+
+class CommForm(forms.Form):
+    name = forms.CharField()

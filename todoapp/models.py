@@ -9,13 +9,21 @@ class Priority(models.Model):
 
     def __str__(self):
         return self.prior_type
+    
+    class Meta: 
+        verbose_name = "Priority"
+        verbose_name_plural = "Priorities"
+
 
 class ToDo(models.Model):
-    name = models.CharField(max_length=50)
+    name = models.CharField("The Name", max_length=50)
     description = models.CharField(max_length=200)
     date = models.DateTimeField(default=datetime.datetime.now())
     priority = models.ForeignKey(Priority, on_delete=models.CASCADE)
 
     def __str__(self):
         return " %s, %s, %s" %(self.name, self.description, self.priority.prior_type)
+
+    class Meta:
+        verbose_name_plural = "To do's"
 
